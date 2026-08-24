@@ -103,7 +103,7 @@ action:
         sequence:
           - action: switch.turn_on
             target:
-              entity_id: "{{ device_entities(device) | select('search', '_display_off$') | list | first }}"
+              entity_id: "{{ device_entities(device) | select('search', '_auto_hide_middle_line$') | list | first }}"
           - action: select.select_option
             target:
               entity_id: "{{ device_entities(device) | select('search', '_sensor$') | list | first }}"
